@@ -7,6 +7,7 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/Dotnet.gitignore
 
+.VS
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -52,3 +53,5 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+Visual Studio 2022 Preview

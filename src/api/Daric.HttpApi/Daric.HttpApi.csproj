@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\components\common\Daric.Configurations\Daric.Configurations.csproj" />
+    <ProjectReference Include="..\..\..\components\common\Daric.Shared\Daric.Shared.csproj" />
+    <ProjectReference Include="..\..\..\components\locking\Daric.Locking.MedallionRedis\Daric.Locking.MedallionRedis.csproj" />
+    <ProjectReference Include="..\..\..\components\logging\Daric.Logging.Console\Daric.Logging.Console.csproj" />
+    <ProjectReference Include="..\..\..\components\scheduling\Daric.Scheduling.Quartz\Daric.Scheduling.Quartz.csproj" />
+    <ProjectReference Include="..\..\application\Daric.Application\Daric.Application.csproj" />
+  </ItemGroup>
+
+</Project>

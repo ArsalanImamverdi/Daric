@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\components\database\Daric.Database.SqlServer\Daric.Database.SqlServer.csproj" />
+    <ProjectReference Include="..\..\domain\Daric.Domain.Accounts\Daric.Domain.Accounts.csproj" />
+    <ProjectReference Include="..\..\domain\Daric.Domain.Bonuses\Daric.Domain.Bonuses.csproj" />
+    <ProjectReference Include="..\..\domain\Daric.Domain.Customers\Daric.Domain.Customers.csproj" />
+    <ProjectReference Include="..\..\domain\Daric.Domain.Transactions\Daric.Domain.Transactions.csproj" />
+  </ItemGroup>
+
+</Project>
