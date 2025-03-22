@@ -14,4 +14,10 @@
     <ProjectReference Include="..\..\domain\Daric.Domain.Transactions\Daric.Domain.Transactions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DomainServices\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

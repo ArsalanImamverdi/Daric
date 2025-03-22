@@ -1,5 +1,6 @@
 using Daric.Configurations;
 using Daric.HttpApi.Utilities;
+using Daric.Infrastructure.SqlServer;
 using Daric.Locking.Abstraction;
 using Daric.Locking.MedallionRedis;
 using Daric.Logging.Abstractions;
@@ -24,6 +25,8 @@ internal class Program
         builder.Services.AddLogging(logging => logging.AddConsoleLogging());
         builder.Services.AddDistributedLock(opt => opt.AddMedallionRedisLockMechanism());
 
+
+        builder.Services.AddDaricDbContext();
 
         var app = builder.Build();
         // Configure the HTTP request pipeline.
