@@ -77,6 +77,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daric.Application", "src\ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daric.HttpApi", "src\api\Daric.HttpApi\Daric.HttpApi.csproj", "{EC445796-511A-4B93-9583-8CF5C00C55F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daric.Domain.Customers.Tests", "tests\domain\Daric.Domain.Customers.Tests\Daric.Domain.Customers.Tests.csproj", "{29317427-63FA-4A5D-B3BC-7B7D694C1F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dirac.Infrastructure.Tests", "tests\infrastructure\Dirac.Infrastructure.Tests\Dirac.Infrastructure.Tests.csproj", "{3C88557A-8A42-4B51-A23F-53B4824CB490}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -175,6 +179,14 @@ Global
 		{EC445796-511A-4B93-9583-8CF5C00C55F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC445796-511A-4B93-9583-8CF5C00C55F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC445796-511A-4B93-9583-8CF5C00C55F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29317427-63FA-4A5D-B3BC-7B7D694C1F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29317427-63FA-4A5D-B3BC-7B7D694C1F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29317427-63FA-4A5D-B3BC-7B7D694C1F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29317427-63FA-4A5D-B3BC-7B7D694C1F07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C88557A-8A42-4B51-A23F-53B4824CB490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C88557A-8A42-4B51-A23F-53B4824CB490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C88557A-8A42-4B51-A23F-53B4824CB490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C88557A-8A42-4B51-A23F-53B4824CB490}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -214,6 +226,8 @@ Global
 		{F3D1A393-ECDF-4B9B-A1FF-3B25DADD997E} = {8F023A04-6C89-41A7-978E-143D6F5250E7}
 		{037F808D-CA01-4673-9E3A-65B809F1F959} = {8F9001A0-9F62-4B23-AECE-9AA37CA343EC}
 		{EC445796-511A-4B93-9583-8CF5C00C55F4} = {092E8B5E-2573-4548-AECC-955BD2F6A096}
+		{29317427-63FA-4A5D-B3BC-7B7D694C1F07} = {F22B909C-CA43-4268-A2CF-45EF0E9A01C1}
+		{3C88557A-8A42-4B51-A23F-53B4824CB490} = {F22B909C-CA43-4268-A2CF-45EF0E9A01C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FBFE271B-8AB2-4370-AE68-3E1B21D4264E}
