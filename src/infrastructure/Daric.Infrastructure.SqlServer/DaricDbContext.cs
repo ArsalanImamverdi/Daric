@@ -1,6 +1,7 @@
 ﻿using Daric.Database;
 using Daric.Database.SqlServer;
 using Daric.Domain.Customers;
+using Daric.Domain.Transactions;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -12,6 +13,7 @@ namespace Daric.Infrastructure.SqlServer
     {
 
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +35,13 @@ namespace Daric.Infrastructure.SqlServer
                 p.Property(p => p.PhoneNumber).HasColumnName(nameof(Phone.PhoneNumber)).HasMaxLength(10);
                 p.Property(p => p.PhoneType).HasColumnName(nameof(Phone.PhoneType)).HasMaxLength(10);
             });
+
+            modelBuilder.Entity<Transaction>().Property(p => p.TransactionType).HasConversion<string>().HasMaxLength(10);
+            modelBuilder.Entity<Transaction>().HasIndex(e => e.CreatedAt);
+            modelBuilder.Entity<Transaction>().Property(p => p.PerformBy).HasConversion<string>().HasMaxLength(10);
+            modelBuilder.Entity<Transaction>().Property(p => p.Status).HasConversion<string>().HasMaxLength(10);
+            modelBuilder.Entity<Transaction>().Property(p => p.Amount).HasPrecision(18, 2);
+            modelBuilder.Entity<Transaction>().Property(p => p.Description).HasMaxLength(1000);
 
         }
     }
