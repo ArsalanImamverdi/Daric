@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dirac.Infrastructure.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daric.Domain.Transactions.Tests", "tests\domain\Daric.Domain.Transactions.Tests\Daric.Domain.Transactions.Tests.csproj", "{E0C0C8CD-FCA4-4EB5-A326-FCFE9AB78E69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daric.Domain.Account.Tests", "tests\domain\Daric.Domain.Account.Tests\Daric.Domain.Account.Tests.csproj", "{43393ACF-6364-4453-BAF7-44752BA32362}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -193,6 +195,10 @@ Global
 		{E0C0C8CD-FCA4-4EB5-A326-FCFE9AB78E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0C0C8CD-FCA4-4EB5-A326-FCFE9AB78E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0C0C8CD-FCA4-4EB5-A326-FCFE9AB78E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43393ACF-6364-4453-BAF7-44752BA32362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43393ACF-6364-4453-BAF7-44752BA32362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43393ACF-6364-4453-BAF7-44752BA32362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43393ACF-6364-4453-BAF7-44752BA32362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -235,6 +241,7 @@ Global
 		{29317427-63FA-4A5D-B3BC-7B7D694C1F07} = {F22B909C-CA43-4268-A2CF-45EF0E9A01C1}
 		{3C88557A-8A42-4B51-A23F-53B4824CB490} = {F22B909C-CA43-4268-A2CF-45EF0E9A01C1}
 		{E0C0C8CD-FCA4-4EB5-A326-FCFE9AB78E69} = {F22B909C-CA43-4268-A2CF-45EF0E9A01C1}
+		{43393ACF-6364-4453-BAF7-44752BA32362} = {F22B909C-CA43-4268-A2CF-45EF0E9A01C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FBFE271B-8AB2-4370-AE68-3E1B21D4264E}

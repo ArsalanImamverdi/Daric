@@ -7,7 +7,12 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Daric.Domain.Customers\Daric.Domain.Customers.csproj" />
 		<ProjectReference Include="..\Daric.Domain.Shared\Daric.Domain.Shared.csproj" />
+		<ProjectReference Include="..\Daric.Domain.Transactions\Daric.Domain.Transactions.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="Daric.Domain.Account.Tests"/>
+	</ItemGroup>
 </Project>

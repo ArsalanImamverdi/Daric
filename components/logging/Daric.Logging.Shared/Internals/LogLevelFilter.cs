@@ -68,6 +68,8 @@ internal class LogLevelFilter(LogEventLevel globalLogLevel, LogLevelOverrideColl
 
         for (int i = startIndex; i < endIndex; i++)
         {
+            if (i - startIndex >= key.Length)
+                break;
             if (char.ToLowerInvariant(value[i]) != char.ToLowerInvariant(key[i - startIndex]))
             {
                 return false;

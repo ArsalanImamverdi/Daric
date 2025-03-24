@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\components\Caching\Daric.Caching.Abstractions\Daric.Caching.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\components\locking\Daric.Locking.Abstractions\Daric.Locking.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\components\scheduling\Daric.Scheduling.Abstraction\Daric.Scheduling.Abstraction.csproj" />
     <ProjectReference Include="..\..\infrastructure\Daric.Infrastructure.SqlServer\Daric.Infrastructure.SqlServer.csproj" />
   </ItemGroup>
 
