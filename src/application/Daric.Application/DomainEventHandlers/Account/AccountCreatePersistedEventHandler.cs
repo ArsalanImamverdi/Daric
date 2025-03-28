@@ -1,16 +1,25 @@
 ﻿using Daric.Domain.Accounts;
 using Daric.Domain.Accounts.DomainEvents;
+using Daric.Domain.Bonuses;
 using Daric.Domain.Shared;
 
 namespace Daric.Application.DomainEventHandlers.Account
 {
-    internal class AccountCreatePersistedEventHandler(IAccountRepository accountRepository) : DomainEventHandler<AccountCreatePersisted>
+    internal class AccountCreatePersistedEventHandler(IAccountRepository accountRepository, IBonusRepository bonusRepository) : DomainEventHandler<AccountCreatePersisted>
     {
         public override async Task<ErrorOr<bool>> HandleAsync(AccountCreatePersisted @event, CancellationToken cancellationToken)
         {
             try
             {
-                // TODO: add bonus
+                var account = await accountRepository.FirstOrDefaultAsync(account => account.AccountNumber == @event.AccountNumber);
+                if (account == null)
+                    return new ResourceNotFoundError(nameof(Account));
+
+                var bonus = Domain.Bonuses.Bonus.CreateWelcomePack(account.Id);
+                if (!bonus)
+                    return bonus.Errors;
+
+                await bonusRepository.Insert(bonus!);
                 @event.Complete();
                 return true;
             }

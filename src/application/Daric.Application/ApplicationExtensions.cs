@@ -1,4 +1,5 @@
 ﻿using Daric.Application.DomainEventHandlers.Account;
+using Daric.Application.DomainEventHandlers.Bonus;
 using Daric.Application.DomainServices.Account;
 using Daric.Application.EventDispatcher;
 using Daric.Domain.Shared;
@@ -15,6 +16,8 @@ namespace Daric.Application
 
             serviceCollection.AddAccountDomainEventHandlers();
             serviceCollection.AddAccountDomainServices();
+
+            serviceCollection.AddBonusDomainEventHandlers();
 
             return serviceCollection;
         }

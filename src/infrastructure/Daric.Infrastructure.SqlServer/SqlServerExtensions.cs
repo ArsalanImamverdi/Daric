@@ -1,6 +1,7 @@
 ﻿using Daric.Database.Abstraction;
 using Daric.Database.SqlServer.Extensions;
 using Daric.Domain.Accounts;
+using Daric.Domain.Bonuses;
 using Daric.Domain.Customers;
 using Daric.Domain.Transactions;
 using Daric.Domain.Transactions.DomainServices;
@@ -18,6 +19,7 @@ namespace Daric.Infrastructure.SqlServer
             serviceCollection.AddDatabase(db => db.AddSqlDatabase(sql => sql.AddContext<DaricDbContext>(opt => opt.AddRepository<ICustomerRepository, CustomerRepository>()
                                                                                                                   .AddRepository<ITransactionRepository, TransactionRepository>()
                                                                                                                   .AddRepository<IAccountRepository, AccountRepository>()
+                                                                                                                  .AddRepository<IBonusRepository, BonusRepository>()
                                                                                                                   .WithUnitOfWork<DaricUnitOfWork>())));
             
             serviceCollection.AddScoped<IAccountNumberGenerator, AccountNumberGenerator>();

@@ -1,6 +1,7 @@
 ﻿using Daric.Database;
 using Daric.Database.SqlServer;
 using Daric.Domain.Accounts;
+using Daric.Domain.Bonuses;
 using Daric.Domain.Customers;
 using Daric.Domain.Transactions;
 
@@ -17,6 +18,9 @@ namespace Daric.Infrastructure.SqlServer
         public DbSet<Transaction> Transactions { get; set; }
 
         public DbSet<Account> Accounts { get; set; }
+
+        public DbSet<Bonus> Bonuses { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -61,6 +65,10 @@ namespace Daric.Infrastructure.SqlServer
             modelBuilder.Entity<Account>().Property(p => p.AccountNumber).HasMaxLength(11);
             modelBuilder.Entity<Account>().Property(p => p.Balance).HasPrecision(18, 2);
             modelBuilder.Entity<Account>().HasIndex(e => e.AccountNumber).IsUnique();
+
+            modelBuilder.Entity<Bonus>().HasIndex(e => e.Type);
+            modelBuilder.Entity<Bonus>().Property(p => p.Type).HasConversion<string>().HasMaxLength(50);
+            modelBuilder.Entity<Bonus>().Property(p => p.Amount).HasPrecision(18, 2);
         }
     }
 }
